@@ -49,3 +49,15 @@ open class GradientView: UIView {
         return false
     }
 }
+
+public extension CGPoint {
+    static var top = CGPoint(x: 0.5, y: 0)
+    static var topLeft = CGPoint(x: 0, y: 0)
+    static var topRight = CGPoint(x: 1, y: 0)
+    static var center = CGPoint(x: 0.5, y: 0.5)
+    static var centerLeft = CGPoint(x: 0, y: 0.5)
+    static var centerRight = CGPoint(x: 1, y: 0.5)
+    static var bottomLeft = CGPoint(x: 0, y: 1)
+    static var bottom = CGPoint(x: 0.5, y: 1)
+    static var bottomRight = CGPoint(x: 1, y: 1)
+}
