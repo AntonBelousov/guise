@@ -36,3 +36,11 @@ public extension UIView {
         return self
     }
 }
+
+public extension UIStackView {
+    func setCustomSpacingAfterLast(_ spacing: CGFloat) {
+        if arrangedSubviews.count > 0 {
+            setCustomSpacing(spacing, after: arrangedSubviews.last!)
+        }
+    }
+}
