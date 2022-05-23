@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/AntonBelousov/guise.git", :tag => "#{spec.version}" }
   spec.source_files  = "*.swift"
-  
+  spec.dependency 'SnapKit'
 end
