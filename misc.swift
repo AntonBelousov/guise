@@ -44,3 +44,28 @@ public extension UIStackView {
         }
     }
 }
+
+public protocol Initializable {}
+
+public extension Initializable {
+    func with(block: (Self) -> ()) -> Self {
+        block(self)
+        return self
+    }
+}
+
+public extension NSObject: Initializable {}
+
+public extension UIView {
+    func addSubview(_ view: UIView, constraints: (ConstraintMaker) -> ()) {
+        addSubview(view)
+        view.snp.makeConstraints(constraints)
+    }
+}
+
+public extension UIStackView {
+    func addArrangedSubview(_ view: UIView, constraints: (ConstraintMaker) -> ()) {
+        addArrangedSubview(view)
+        view.snp.makeConstraints(constraints)
+    }
+}
