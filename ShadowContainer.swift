@@ -58,4 +58,28 @@ open class ShadowedContainer: UIView {
     open func updateShadow() {
         shadowView.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
     }
+        
+    public var onTap: (() -> ())?
+    
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if onTap != nil {
+            shadowView.alpha = 0.5
+        }
+    }
+    
+    open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        if onTap != nil {
+            shadowView.alpha = 1
+        }
+    }
+    
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        if onTap != nil {
+            shadowView.alpha = 1
+            onTap?()
+        }
+    }
 }
