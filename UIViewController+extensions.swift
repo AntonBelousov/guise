@@ -1,8 +1,8 @@
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
-    public func setBackButtonTitle(_ title: String) {
+    func setBackButtonTitle(_ title: String) {
         let nvc = self.navigationController
         let currentViewControllerIndex = nvc?.viewControllers.firstIndex(of: self) ?? 0
         
