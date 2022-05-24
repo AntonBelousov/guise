@@ -47,7 +47,7 @@ open class ShadowedContainer: UIView {
         backgroundView.clipsToBounds = true
         backgroundView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
-        defer { shadowOpacity = 1 }
+        // defer { shadowOpacity = 1 }
     }
     
     open override func layoutSubviews() {
