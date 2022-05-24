@@ -54,4 +54,4 @@ public extension Initializable {
     }
 }
 
-public extension NSObject: Initializable {}
+extension NSObject: Initializable {}
