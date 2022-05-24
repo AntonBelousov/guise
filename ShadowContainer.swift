@@ -7,36 +7,36 @@
 
 import UIKit
 
-public class ShadowedContainer: UIView {
+open class ShadowedContainer: UIView {
     
-    public var shadowColor: UIColor? {
+    open var shadowColor: UIColor? {
         didSet { shadowView.layer.shadowColor = shadowColor?.cgColor }
     }
-    public var shadowOffset = CGSize.zero {
+    open var shadowOffset = CGSize.zero {
         didSet { shadowView.layer.shadowOffset = shadowOffset }
     }
-    public var shadowOpacity: Float = 1 {
+    open var shadowOpacity: Float = 1 {
         didSet { shadowView.layer.shadowOpacity = shadowOpacity }
     }
     
-    public var shadowRadius: CGFloat = 0 {
+    open var shadowRadius: CGFloat = 0 {
         didSet { shadowView.layer.shadowRadius = shadowRadius }
     }
     
-    public var cornerRadius: CGFloat = 0 {
+    open var cornerRadius: CGFloat = 0 {
         didSet {
             backgroundView.layer.cornerRadius = cornerRadius
             updateShadow()
         }
     }
     
-    public override var backgroundColor: UIColor? {
+    open override var backgroundColor: UIColor? {
         set { backgroundView.backgroundColor = newValue }
         get { backgroundView.backgroundColor }
     }
     
-    public var shadowView = UIView()
-    public var backgroundView = UIView()
+    open var shadowView = UIView()
+    open var backgroundView = UIView()
     
     public convenience init() {
         self.init(frame: .zero)
@@ -50,12 +50,12 @@ public class ShadowedContainer: UIView {
         defer { shadowOpacity = 1 }
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         updateShadow()
     }
     
-    func updateShadow() {
+    open func updateShadow() {
         shadowView.layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
     }
 }
