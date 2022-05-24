@@ -31,6 +31,7 @@ public extension NSAttributedString {
 }
 
 public extension UIView {
+    @discardableResult
     func forAutolayout() -> Self {
         translatesAutoresizingMaskIntoConstraints = false
         return self
