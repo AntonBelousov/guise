@@ -9,7 +9,7 @@ public extension UIView {
     }
 }
 
-extension UIView {
+public extension UIView {
     func addSubview(_ view: UIView, constraints: (ConstraintMaker, UIView) -> ()) {
         addSubview(view)
         view.snp.makeConstraints { make in
