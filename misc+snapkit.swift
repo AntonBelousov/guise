@@ -17,3 +17,10 @@ public extension UIView {
         }
     }
 }
+
+public extension UIStackView {
+    func addArrangedSubview(_ view: UIView, constraints: (ConstraintMaker) -> ()) {
+        addArrangedSubview(view)
+        view.snp.makeConstraints(constraints)
+    }
+}
