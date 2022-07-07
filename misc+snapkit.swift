@@ -50,9 +50,9 @@ public class ScrollStackView: UIView {
 }
 
 import SnapKit
-class AspectRatioImageView: UIImageView {
+public class AspectRatioImageView: UIImageView {
     
-    override var image: UIImage? {
+    public override var image: UIImage? {
         didSet {
             guard let image = image else {
                 snp.removeConstraints()
