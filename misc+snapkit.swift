@@ -24,3 +24,43 @@ public extension UIStackView {
         view.snp.makeConstraints(constraints)
     }
 }
+
+public class ScrollStackView: UIView {
+    public var scrollView = UIScrollView()
+    public var stackView = UIStackView()
+    
+    public convenience init() {
+        self.init(hInsets: 0)
+    }
+    
+    public convenience init(hInsets: CGFloat) {
+        self.init(frame: .zero)
+        stackView.axis = .vertical
+        scrollView.keyboardDismissMode = .onDrag
+        addSubview(scrollView.with {
+            $0.addSubview(stackView) {
+                $0.top.bottom.equalToSuperview()
+                $0.leading.trailing.equalToSuperview().inset(hInsets)
+                $0.width.equalToSuperview().inset(hInsets)
+            }
+        }) {
+            $0.edges.equalToSuperview()
+        }
+    }
+}
+
+import SnapKit
+class AspectRatioImageView: UIImageView {
+    
+    override var image: UIImage? {
+        didSet {
+            guard let image = image else {
+                snp.removeConstraints()
+                return
+            }
+            snp.remakeConstraints {
+                $0.height.equalTo(snp.width).multipliedBy(image.size.height/image.size.width)
+            }
+        }
+    }
+}
