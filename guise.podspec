@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "12.0"
   spec.swift_version = '5.5'
 
-  spec.source       = { :git => "https://github.com/AntonBelousov/guise.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "git@github.com:AntonBelousov/guise.git", :tag => "#{spec.version}" }
   spec.source_files  = "*.swift"
 
   spec.subspec 'snapkit' do |sspec|
