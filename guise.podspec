@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'snapkit' do |sspec|
     sspec.source_files = 'snapkit/*.swift'
-    spec.dependency 'SnapKit'
+    sspec.dependency 'SnapKit'
   end
 
 end
