@@ -49,7 +49,6 @@ public class ScrollStackView: UIView {
     }
 }
 
-import SnapKit
 public class AspectRatioImageView: UIImageView {
     
     public override var image: UIImage? {
