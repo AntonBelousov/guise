@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   spec.default_subspecs = 'core'
 
   spec.subspec 'core' do |sspec|
-    spec.source_files  = "*.swift"
+    sspec.source_files  = "*.swift"
   end
 
   spec.subspec 'snapkit' do |sspec|
