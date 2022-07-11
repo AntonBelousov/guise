@@ -15,13 +15,18 @@ Pod::Spec.new do |spec|
   spec.default_subspecs = 'core'
 
   spec.subspec 'core' do |sspec|
-    sspec.source_files  = "*.swift"
-  end
-
-  spec.subspec 'snapkit' do |sspec|
-    sspec.source_files = 'snapkit/*.swift'
+    sspec.source_files  = "**/*.swift"
     sspec.dependency 'SnapKit'
-    sspec.dependency 'guise/core'
   end
+  
+#   spec.subspec 'core' do |sspec|
+#     sspec.source_files  = "*.swift"
+#   end
+
+#   spec.subspec 'snapkit' do |sspec|
+#     sspec.source_files = 'snapkit/*.swift'
+#     sspec.dependency 'SnapKit'
+#     sspec.dependency 'guise/core'
+#   end
 
 end
