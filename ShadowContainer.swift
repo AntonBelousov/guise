@@ -2,7 +2,6 @@
 //  ShadowContainer.swift
 //  cleaner
 //
-//  Created by Anton Belousov on 23.05.2022.
 //
 
 import UIKit

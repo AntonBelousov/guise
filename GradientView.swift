@@ -1,8 +1,5 @@
 //
 //  GradientView.swift
-//  Anton Belousov
-//
-//  Copyright © 2022 Anton Belousov. All rights reserved.
 //
 
 import UIKit

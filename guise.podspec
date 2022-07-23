@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
   spec.summary      = "Collection of ui elements and helpers"
   spec.homepage     = "https://github.com/AntonBelousov/guise"
   spec.license      = { :type => "MIT" }
-  spec.author       = { "AB" => "antbelousov@gmail.com" }
+  spec.author       = { "AB" => "fff@xxx.com" }
   
   spec.requires_arc = true
   spec.platform     = :ios
